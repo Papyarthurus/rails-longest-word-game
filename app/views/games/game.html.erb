@@ -1,0 +1,32 @@
+<h1>Games#game</h1>
+
+<h2>******** Welcome to the longest word-game !********</h2>
+
+<p>Here is your grid : <%= @grid %></p>
+
+<!-- <br/> -->
+
+<p>"*****************************************************"</p>
+
+<form action="score" method="get">
+  <label for="question">What's your best shot ?</label>
+  <input type="text" name="shot" placeholder="Put ur shot there...">
+  <input type="hidden" name="grid" value='<%= @grid %>'>
+  <input type="hidden" name="start_time" value='<%= @start_time %>'>
+  <input type="submit" value="Go on!">
+</form>
+
+<!--
+
+puts "******** Welcome to the longest word-game !********"
+puts "Here is your grid :"
+grid = generate_grid(9)
+puts grid.join(" ")
+puts "*****************************************************"
+
+puts "What's your best shot ?"
+start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now
+
+<p>Find me in app/views/games/game.html.erb</p>
